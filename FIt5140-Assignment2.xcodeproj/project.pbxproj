@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372091509ECC5B008622ABBC /* Pods_FIt5140_Assignment2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37B8FB1F34606B33AB3046F /* Pods_FIt5140_Assignment2.framework */; };
+		6062CB702329D41E008E6DAE /* Barometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB6F2329D41E008E6DAE /* Barometric.swift */; };
+		6062CB732329D764008E6DAE /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB722329D764008E6DAE /* FirebaseController.swift */; };
+		6062CB752329D845008E6DAE /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB742329D845008E6DAE /* DatabaseProtocol.swift */; };
 		60EBE497232899F200917126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE496232899F200917126 /* AppDelegate.swift */; };
 		60EBE499232899F200917126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE498232899F200917126 /* ViewController.swift */; };
 		60EBE49C232899F200917126 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EBE49A232899F200917126 /* Main.storyboard */; };
@@ -15,6 +19,9 @@
 		60EBE4AC232899F300917126 /* FIt5140_Assignment2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE4AB232899F300917126 /* FIt5140_Assignment2Tests.swift */; };
 		60EBE4B7232899F300917126 /* FIt5140_Assignment2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE4B6232899F300917126 /* FIt5140_Assignment2UITests.swift */; };
 		60EBE4C523289A3300917126 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60EBE4C423289A3200917126 /* GoogleService-Info.plist */; };
+		60F8AE3923305D8D006D598E /* MulticastDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F8AE3823305D8D006D598E /* MulticastDelegate.swift */; };
+		9B36AE8044D6B1185475E69C /* Pods_FIt5140_Assignment2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065621EE103F5A6B4DDABEF6 /* Pods_FIt5140_Assignment2Tests.framework */; };
+		FD2A73364BF04982BD312882 /* Pods_FIt5140_Assignment2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14662487E8EC1664BD5D9C3C /* Pods_FIt5140_Assignment2UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0131CF91286FDC7DCC4F12BF /* Pods-FIt5140-Assignment2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2Tests.debug.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2Tests/Pods-FIt5140-Assignment2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		040E273C2FF09173501BA514 /* Pods-FIt5140-Assignment2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2Tests.release.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2Tests/Pods-FIt5140-Assignment2Tests.release.xcconfig"; sourceTree = "<group>"; };
+		065621EE103F5A6B4DDABEF6 /* Pods_FIt5140_Assignment2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIt5140_Assignment2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14662487E8EC1664BD5D9C3C /* Pods_FIt5140_Assignment2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIt5140_Assignment2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A592D89888530AE4377E30E /* Pods-FIt5140-Assignment2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2UITests.release.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2UITests/Pods-FIt5140-Assignment2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		6062CB6F2329D41E008E6DAE /* Barometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometric.swift; sourceTree = "<group>"; };
+		6062CB722329D764008E6DAE /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
+		6062CB742329D845008E6DAE /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		60EBE493232899F200917126 /* FIt5140-Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FIt5140-Assignment2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EBE496232899F200917126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60EBE498232899F200917126 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +64,11 @@
 		60EBE4B6232899F300917126 /* FIt5140_Assignment2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIt5140_Assignment2UITests.swift; sourceTree = "<group>"; };
 		60EBE4B8232899F300917126 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60EBE4C423289A3200917126 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60F8AE3823305D8D006D598E /* MulticastDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastDelegate.swift; sourceTree = "<group>"; };
+		7674C933378FDD58454D704D /* Pods-FIt5140-Assignment2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2UITests.debug.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2UITests/Pods-FIt5140-Assignment2UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCFB679A7BFD82B4AA06759A /* Pods-FIt5140-Assignment2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2.release.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2/Pods-FIt5140-Assignment2.release.xcconfig"; sourceTree = "<group>"; };
+		E37B8FB1F34606B33AB3046F /* Pods_FIt5140_Assignment2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIt5140_Assignment2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3AE070B6FBAABEC48B55EA5 /* Pods-FIt5140-Assignment2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2.debug.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2/Pods-FIt5140-Assignment2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				372091509ECC5B008622ABBC /* Pods_FIt5140_Assignment2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B36AE8044D6B1185475E69C /* Pods_FIt5140_Assignment2Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +92,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2A73364BF04982BD312882 /* Pods_FIt5140_Assignment2UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C298522E53640D33B96A3AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3AE070B6FBAABEC48B55EA5 /* Pods-FIt5140-Assignment2.debug.xcconfig */,
+				BCFB679A7BFD82B4AA06759A /* Pods-FIt5140-Assignment2.release.xcconfig */,
+				0131CF91286FDC7DCC4F12BF /* Pods-FIt5140-Assignment2Tests.debug.xcconfig */,
+				040E273C2FF09173501BA514 /* Pods-FIt5140-Assignment2Tests.release.xcconfig */,
+				7674C933378FDD58454D704D /* Pods-FIt5140-Assignment2UITests.debug.xcconfig */,
+				4A592D89888530AE4377E30E /* Pods-FIt5140-Assignment2UITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3B6AF9CF7A0CCE0CD9BC68FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E37B8FB1F34606B33AB3046F /* Pods_FIt5140_Assignment2.framework */,
+				065621EE103F5A6B4DDABEF6 /* Pods_FIt5140_Assignment2Tests.framework */,
+				14662487E8EC1664BD5D9C3C /* Pods_FIt5140_Assignment2UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60EBE48A232899F200917126 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +130,8 @@
 				60EBE4AA232899F300917126 /* FIt5140-Assignment2Tests */,
 				60EBE4B5232899F300917126 /* FIt5140-Assignment2UITests */,
 				60EBE494232899F200917126 /* Products */,
+				2C298522E53640D33B96A3AC /* Pods */,
+				3B6AF9CF7A0CCE0CD9BC68FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +155,10 @@
 				60EBE49F232899F300917126 /* LaunchScreen.storyboard */,
 				60EBE4A2232899F300917126 /* Info.plist */,
 				60EBE4C423289A3200917126 /* GoogleService-Info.plist */,
+				6062CB6F2329D41E008E6DAE /* Barometric.swift */,
+				6062CB722329D764008E6DAE /* FirebaseController.swift */,
+				6062CB742329D845008E6DAE /* DatabaseProtocol.swift */,
+				60F8AE3823305D8D006D598E /* MulticastDelegate.swift */,
 			);
 			path = "FIt5140-Assignment2";
 			sourceTree = "<group>";
@@ -135,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60EBE4BB232899F300917126 /* Build configuration list for PBXNativeTarget "FIt5140-Assignment2" */;
 			buildPhases = (
+				E91138244E9DA15576080C87 /* [CP] Check Pods Manifest.lock */,
 				60EBE48F232899F200917126 /* Sources */,
 				60EBE490232899F200917126 /* Frameworks */,
 				60EBE491232899F200917126 /* Resources */,
+				0BA571DCAE10D3E29B54B848 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60EBE4BE232899F300917126 /* Build configuration list for PBXNativeTarget "FIt5140-Assignment2Tests" */;
 			buildPhases = (
+				3CEF4D6FF6A57BEEC7CBFB17 /* [CP] Check Pods Manifest.lock */,
 				60EBE4A3232899F300917126 /* Sources */,
 				60EBE4A4232899F300917126 /* Frameworks */,
 				60EBE4A5232899F300917126 /* Resources */,
@@ -170,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60EBE4C1232899F300917126 /* Build configuration list for PBXNativeTarget "FIt5140-Assignment2UITests" */;
 			buildPhases = (
+				8F5986AF96C52CC43C673E2C /* [CP] Check Pods Manifest.lock */,
 				60EBE4AE232899F300917126 /* Sources */,
 				60EBE4AF232899F300917126 /* Frameworks */,
 				60EBE4B0232899F300917126 /* Resources */,
@@ -255,13 +312,103 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BA571DCAE10D3E29B54B848 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIt5140-Assignment2/Pods-FIt5140-Assignment2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FIt5140-Assignment2/Pods-FIt5140-Assignment2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FIt5140-Assignment2/Pods-FIt5140-Assignment2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CEF4D6FF6A57BEEC7CBFB17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIt5140-Assignment2Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F5986AF96C52CC43C673E2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIt5140-Assignment2UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E91138244E9DA15576080C87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FIt5140-Assignment2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60EBE48F232899F200917126 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6062CB732329D764008E6DAE /* FirebaseController.swift in Sources */,
 				60EBE499232899F200917126 /* ViewController.swift in Sources */,
+				6062CB702329D41E008E6DAE /* Barometric.swift in Sources */,
 				60EBE497232899F200917126 /* AppDelegate.swift in Sources */,
+				6062CB752329D845008E6DAE /* DatabaseProtocol.swift in Sources */,
+				60F8AE3923305D8D006D598E /* MulticastDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +581,7 @@
 		};
 		60EBE4BC232899F300917126 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3AE070B6FBAABEC48B55EA5 /* Pods-FIt5140-Assignment2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +600,7 @@
 		};
 		60EBE4BD232899F300917126 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCFB679A7BFD82B4AA06759A /* Pods-FIt5140-Assignment2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +619,7 @@
 		};
 		60EBE4BF232899F300917126 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0131CF91286FDC7DCC4F12BF /* Pods-FIt5140-Assignment2Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +641,7 @@
 		};
 		60EBE4C0232899F300917126 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 040E273C2FF09173501BA514 /* Pods-FIt5140-Assignment2Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +663,7 @@
 		};
 		60EBE4C2232899F300917126 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7674C933378FDD58454D704D /* Pods-FIt5140-Assignment2UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +684,7 @@
 		};
 		60EBE4C3232899F300917126 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A592D89888530AE4377E30E /* Pods-FIt5140-Assignment2UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

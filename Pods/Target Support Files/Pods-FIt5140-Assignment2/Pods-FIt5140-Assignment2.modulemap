@@ -1,0 +1,6 @@
+framework module Pods_FIt5140_Assignment2 {
+  umbrella header "Pods-FIt5140-Assignment2-umbrella.h"
+
+  export *
+  module * { export * }
+}
