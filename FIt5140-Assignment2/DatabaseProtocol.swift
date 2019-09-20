@@ -16,14 +16,16 @@ enum DatabaseChange {
 
 enum ListenerType {
     case all
-    case temperature
-    case attitude
-    case pressure
+    case BarometricData
 }
 
 protocol DatabaseListener: AnyObject {
     var listenerType: ListenerType {get set}
+    func onBarometricChange(change: DatabaseChange, BarometricData: [Barometric])
 }
 
 protocol DatabaseProtocol: AnyObject {
+   // func addNewBarometricData(date: Date, pressure: Double, attitude: Double, temperature: Double)
+    func addListener(listener: DatabaseListener)
+    func removeListener(listener: DatabaseListener)
 }
