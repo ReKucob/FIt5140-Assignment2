@@ -26,32 +26,27 @@ class FirebaseController: NSObject, DatabaseProtocol {
         database = Firestore.firestore()
         BarometricSensorDataList = [Barometric]()
         
-        
         super.init()
         
         authController.signInAnonymously(){(authResult,error) in
             guard authResult != nil else{
                 fatalError("Firebase athentication faileds")
             }
-            
             self.setUpListeners()
-            
         }
-        
-        
     }
-    
-    
     
     func setUpListeners(){
         barometricRef = database.collection("Barometric")
-        barometricRef?.addSnapshotListener{QuerySnapshot,error in
-           guard (QuerySnapshot?.documents) != nil
+        barometricRef?.addSnapshotListener{querySnapshot,error in
+           guard (querySnapshot?.documents) != nil
             else
             {
             print("Error fetching documengs:\(error!)")
                 return
-            }}
+            }
+            self.parseBarometricSnapshot(snapshot: querySnapshot!)
+    }
     }
     
     func parseBarometricSnapshot(snapshot: QuerySnapshot) {
@@ -69,10 +64,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
                 let newSensorData = Barometric(newTime: date, newPressure: pressure, newAttitude: attritude, newTempature: temperature)
                 
                 BarometricSensorDataList.append(newSensorData)
-                
             }
-            
-            
     }
         listeners.invoke{(listener) in
             if listener.listenerType == ListenerType.all || listener.listenerType == ListenerType.BarometricData{
@@ -80,10 +72,6 @@ class FirebaseController: NSObject, DatabaseProtocol {
     }
    }
 }
-    
-//    func addNewBarometricData(date: Date, pressure: Double, attitude: Double, temperature: Double) -> Barometric{
-//      
-//    }
     
     func addListener(listener: DatabaseListener) {
         listeners.addDelegate(listener)
@@ -96,5 +84,4 @@ class FirebaseController: NSObject, DatabaseProtocol {
     func removeListener(listener: DatabaseListener) {
         listeners.removeDelegate(listener)
     }
-
 }

@@ -10,11 +10,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var startButton: UIButton!
+    var barometers: Barometric?
+
+    @IBOutlet weak var temperatureField: UILabel!
+    @IBOutlet weak var pressureField: UILabel!
+    @IBOutlet weak var attitudeField: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if (barometers != nil){
+        temperatureField.text! = String(format:"%f",barometers!.temperature!);
+        pressureField.text! = String(format: "%f",barometers!.pressure!);
+        attitudeField.text! = String(format:"%f",barometers!.attitude!);
+        
+        }
         // Do any additional setup after loading the view.
     }
+    
+    
 
 
 }
