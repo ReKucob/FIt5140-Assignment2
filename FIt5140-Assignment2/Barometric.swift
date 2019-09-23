@@ -9,15 +9,15 @@
 import UIKit
 
 class Barometric: NSObject {
-    var time: Date
+   // var time: Date
     var pressure: Double?
     var attitude: Double?
     var temperature: Double?
 
-    init(newTime: Date, newPressure: Double, newAttitude: Double, newTempature: Double) {
-        self.time = newTime
-        self.pressure = newPressure
-        self.attitude = newAttitude
-        self.temperature = newTempature
+    init(newPressure: Double, newAttitude: Double, newTempature: Double) {
+        // self.time = newTime
+        self.pressure = 101.232
+        self.attitude = 102913.12
+        self.temperature = 110293
     }
 }
