@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, DatabaseListener{
     
-    weak var firebaseMeter: DatabaseProtocol?
+    weak var firebaseController: DatabaseProtocol?
     var baroDataList: [Barometric] = []
-    var listenerType: ListenerType
+    
 
     @IBOutlet weak var temperatureField: UILabel!
     @IBOutlet weak var pressureField: UILabel!
@@ -21,31 +21,34 @@ class ViewController: UIViewController, DatabaseListener{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        firebaseController = appDelegate.firebaseController
 
         if (baroDataList != []){
             temperatureField.text! = String(format:"%f",baroDataList.last!.temperature!);
             pressureField.text! = String(format: "%f",baroDataList.last!.pressure!);
             attitudeField.text! = String(format:"%f",baroDataList.last!.attitude!);
-        
         }
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        firebaseMeter?.addListener(listener:self)
+        firebaseController!.addListener(listener: self)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        firebaseMeter?.addListener(listener: self)
+        firebaseController!.removeListener(listener: self)
     }
     
+    //  MARK: - Database Listener
+    
+    var listenerType = ListenerType.BarometricData
     
     func onBarometricChange(change: DatabaseChange, BarometricData: [Barometric]) {
-        
     }
-    
-    
+
 }
+
 

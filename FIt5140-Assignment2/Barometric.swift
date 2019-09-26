@@ -16,8 +16,8 @@ class Barometric: NSObject {
 
     init(newPressure: Double, newAttitude: Double, newTempature: Double) {
         // self.time = newTime
-        self.pressure = 101.232
-        self.attitude = 102913.12
-        self.temperature = 110293
+        self.pressure = newPressure
+        self.attitude = newAttitude
+        self.temperature = newTempature
     }
 }

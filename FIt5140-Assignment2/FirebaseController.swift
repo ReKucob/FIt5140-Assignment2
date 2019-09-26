@@ -38,7 +38,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
     
     func setUpListeners(){
         barometricRef = database.collection("Barometric sensor data")
-        barometricRef?.addSnapshotListener{querySnapshot,error in
+        barometricRef?.addSnapshotListener{(querySnapshot,error) in
            guard (querySnapshot?.documents) != nil
             else
             {
@@ -50,10 +50,11 @@ class FirebaseController: NSObject, DatabaseProtocol {
     }
     
     func parseBarometricSnapshot(snapshot: QuerySnapshot) {
+        
         snapshot.documentChanges.forEach{ change in
+        
         let documentRef = change.document.documentID
-        //let date = change.document.data()["date"] as! Date
-        let attritude = change.document.data()["attitude"] as! Double
+        let attitude = change.document.data()["attitude"] as! Double
         let pressure = change.document.data()["pressure"] as! Double
         let temperature = change.document.data()["temperature"] as! Double
         print(documentRef)
@@ -61,13 +62,12 @@ class FirebaseController: NSObject, DatabaseProtocol {
             
             if change.type == .added{
                 print("New sensor data: \(change.document.data())")
-                let newSensorData = Barometric(newPressure: pressure, newAttitude: attritude, newTempature: temperature)
+                let newSensorData = Barometric(newPressure: pressure,newAttitude: attitude, newTempature: temperature)
                 
                 BarometricSensorDataList.append(newSensorData)
                 
             }
     }
-        
         listeners.invoke{(listener) in
             if listener.listenerType == ListenerType.all || listener.listenerType == ListenerType.BarometricData{
                 listener.onBarometricChange(change: .update, BarometricData: BarometricSensorDataList)
