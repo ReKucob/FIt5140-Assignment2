@@ -15,6 +15,7 @@ class ViewController: UIViewController, DatabaseListener{
     
 
     @IBOutlet weak var temperatureField: UILabel!
+    
     @IBOutlet weak var pressureField: UILabel!
     @IBOutlet weak var attitudeField: UILabel!
     
@@ -24,13 +25,9 @@ class ViewController: UIViewController, DatabaseListener{
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         firebaseController = appDelegate.firebaseController
-
-        if (baroDataList != []){
-            temperatureField.text! = String(format:"%f",baroDataList.last!.temperature!);
-            pressureField.text! = String(format: "%f",baroDataList.last!.pressure!);
-            attitudeField.text! = String(format:"%f",baroDataList.last!.attitude!);
-        }
+        
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,6 +44,13 @@ class ViewController: UIViewController, DatabaseListener{
     var listenerType = ListenerType.BarometricData
     
     func onBarometricChange(change: DatabaseChange, BarometricData: [Barometric]) {
+        baroDataList = BarometricData
+        
+        if (!baroDataList.isEmpty){
+        temperatureField.text! = String(format:"%f",baroDataList.last!.temperature!);
+        pressureField.text! = String(format: "%f",baroDataList.last!.pressure!);
+        attitudeField.text! = String(format:"%f",baroDataList.last!.attitude!);
+        }
     }
 
 }
