@@ -17,11 +17,13 @@ enum DatabaseChange {
 enum ListenerType {
     case all
     case BarometricData
+    case RGBData
 }
 
 protocol DatabaseListener: AnyObject {
     var listenerType: ListenerType {get set}
     func onBarometricChange(change: DatabaseChange, BarometricData: [Barometric])
+    func onRGBChange(change: DatabaseChange, RGBData: [RGBcolor])
 }
 
 protocol DatabaseProtocol: AnyObject {

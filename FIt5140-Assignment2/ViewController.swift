@@ -9,13 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController, DatabaseListener{
+   
+    
     
     weak var firebaseController: DatabaseProtocol?
     var baroDataList: [Barometric] = []
+    var RGBDataList: [RGBcolor] = []
     
 
     @IBOutlet weak var temperatureField: UILabel!
-    
     @IBOutlet weak var pressureField: UILabel!
     @IBOutlet weak var attitudeField: UILabel!
     
@@ -41,7 +43,7 @@ class ViewController: UIViewController, DatabaseListener{
     
     //  MARK: - Database Listener
     
-    var listenerType = ListenerType.BarometricData
+    var listenerType = ListenerType.all
     
     func onBarometricChange(change: DatabaseChange, BarometricData: [Barometric]) {
         baroDataList = BarometricData
@@ -52,6 +54,14 @@ class ViewController: UIViewController, DatabaseListener{
         attitudeField.text! = String(format:"%f",baroDataList.last!.attitude!);
         }
     }
+    
+    func onRGBChange(change: DatabaseChange, RGBData: [RGBcolor]) {
+        RGBDataList = RGBData
+        
+        if (!RGBDataList.isEmpty){
+            view.backgroundColor = UIColor(red: CGFloat(RGBDataList.last!.red!), green: CGFloat(RGBDataList.last!.green!), blue: CGFloat(RGBDataList.last!.blue!), alpha: 1.0)
+        }
+       }
 
 }
 
