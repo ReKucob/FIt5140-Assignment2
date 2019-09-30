@@ -59,7 +59,7 @@ class ViewController: UIViewController, DatabaseListener{
         RGBDataList = RGBData
         
         if (!RGBDataList.isEmpty){
-            view.backgroundColor = UIColor(red: CGFloat(RGBDataList.last!.red!), green: CGFloat(RGBDataList.last!.green!), blue: CGFloat(RGBDataList.last!.blue!), alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: CGFloat(RGBDataList.last!.red!/255.0), green: CGFloat(RGBDataList.last!.green!/255.0), blue: CGFloat(RGBDataList.last!.blue!/255.0),alpha: 1.0)
         }
        }
 

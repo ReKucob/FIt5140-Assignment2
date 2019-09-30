@@ -261,5 +261,99 @@
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A4272F9-CCD2-46D0-BCC9-01C01EACAC7C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FIt5140-Assignment2/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "onRGBChange(change:RGBData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AF928C4-561D-4EBD-B7D7-5B5BEB66ABB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FIt5140-Assignment2/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0AF928C4-561D-4EBD-B7D7-5B5BEB66ABB6 - edd25d164d380f5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FIt5140_Assignment2.AppDelegate.__allocating_init() -&gt; FIt5140_Assignment2.AppDelegate"
+                  moduleName = "FIt5140-Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/burns/Documents/FIT5140/FIt5140-Assignment2/FIt5140-Assignment2/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "0AF928C4-561D-4EBD-B7D7-5B5BEB66ABB6 - c068c9b3a17f0a2d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FIt5140_Assignment2.AppDelegate.init() -&gt; FIt5140_Assignment2.AppDelegate"
+                  moduleName = "FIt5140-Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/burns/Documents/FIT5140/FIt5140-Assignment2/FIt5140-Assignment2/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "0AF928C4-561D-4EBD-B7D7-5B5BEB66ABB6 - a708cecb00d01401"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FIt5140_Assignment2.AppDelegate.__deallocating_deinit"
+                  moduleName = "FIt5140-Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/burns/Documents/FIT5140/FIt5140-Assignment2/FIt5140-Assignment2/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "0AF928C4-561D-4EBD-B7D7-5B5BEB66ABB6 - 4b512cd52e22e1fd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "FIt5140-Assignment2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/burns/Documents/FIT5140/FIt5140-Assignment2/FIt5140-Assignment2/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -11,6 +11,7 @@ pod 'Firebase/Analytics'
 # For example, to use Firebase Authentication and Cloud Firestore
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'Charts'
 
   # Pods for FIt5140-Assignment2
 

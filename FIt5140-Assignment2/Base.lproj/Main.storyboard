@@ -13,7 +13,7 @@
             <objects>
                 <viewController title="iWeather" id="0Pc-mC-jr6" customClass="ViewController" customModule="FIt5140_Assignment2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ka-F8-Svt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEy-mV-6og">
@@ -85,13 +85,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hTl-oo-OIO"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="iWeather" id="jvy-62-4HY">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="organize" id="Rme-8U-zEG">
+                        <barButtonItem key="rightBarButtonItem" title="Charts" id="rk8-dL-Ggk">
                             <connections>
-                                <segue destination="scA-QN-WHn" kind="show" identifier="showSensorSegue" id="72r-Iu-Etl"/>
+                                <segue destination="rQW-7M-G96" kind="show" identifier="showChartsSegue" id="WdK-Pa-PJA"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="attitudeField" destination="TMZ-W5-zX3" id="eb3-5k-J4w"/>
                         <outlet property="pressureField" destination="eIz-1L-PdR" id="Tae-Vu-XLB"/>
@@ -100,12 +102,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwf-Jv-es4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="27"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="26.785714285714285"/>
+        </scene>
+        <!--charts-->
+        <scene sceneID="i7f-zb-2hb">
+            <objects>
+                <viewController id="rQW-7M-G96" customClass="ChartViewController" customModule="FIt5140_Assignment2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Vz-gk-u4N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-wL-6Vz" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="88" width="414" height="331"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Oc7-vH-6pZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="charts" id="lvY-27-S9R"/>
+                    <connections>
+                        <outlet property="lineviewChart" destination="hjT-wL-6Vz" id="dqH-Me-YBm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwG-mj-1wF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795.6521739130437" y="26.785714285714285"/>
         </scene>
         <!--initialScreen-->
         <scene sceneID="MUs-RQ-s15">
             <objects>
-                <navigationController title="initialScreen" automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="NhS-Bp-BlZ" sceneMemberID="viewController">
+                <navigationController title="initialScreen" automaticallyAdjustsScrollViewInsets="NO" id="NhS-Bp-BlZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LM0-Yn-Iss">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -113,7 +141,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TeH-l7-l7R">
-                        <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -123,21 +150,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sb6-G0-51K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="27"/>
-        </scene>
-        <!--Sensor Data Charts-->
-        <scene sceneID="JVZ-LY-CSQ">
-            <objects>
-                <viewController title="Sensor Data Charts" id="scA-QN-WHn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dVF-dg-l1C">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="5Ow-XT-lrf"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hCp-LL-6wZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1943" y="27"/>
         </scene>
     </scenes>
 </document>

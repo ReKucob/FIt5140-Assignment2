@@ -40,7 +40,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
     }
     
     func setUpListeners(){
-        barometricRef = database.collection("sensors")
+        barometricRef = database.collection("Barometric sensor data")
         barometricRef?.addSnapshotListener{(querySnapshot,error) in
            guard (querySnapshot?.documents) != nil
             else
@@ -50,7 +50,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
             }
             self.parseBarometricSnapshot(snapshot: querySnapshot!)
     }
-        rgbRef = database.collection("rgb")
+        rgbRef = database.collection("RGB sensor data")
         rgbRef?.addSnapshotListener{(querySnapshot,error) in
             guard querySnapshot?.documents != nil
             else
@@ -67,7 +67,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
         snapshot.documentChanges.forEach{ change in
         
         let documentRef = change.document.documentID
-        let attitude = change.document.data()["altitude"] as! Double
+        let attitude = change.document.data()["attitude"] as! Double
         let pressure = change.document.data()["pressure"] as! Double
         let temperature = change.document.data()["temperature"] as! Double
         print(documentRef)
@@ -103,9 +103,9 @@ class FirebaseController: NSObject, DatabaseProtocol {
         snapshot.documentChanges.forEach{ change in
         
         let documentRGB = change.document.documentID
-            let red = change.document.data()["red"] as! Float
-            let green = change.document.data()["green"] as! Float
-            let blue = change.document.data()["blue"] as! Float
+            let red = change.document.data()["Red"] as! Float
+            let green = change.document.data()["Green"] as! Float
+            let blue = change.document.data()["Blue"] as! Float
         print(documentRGB)
             
             if change.type == .added{
