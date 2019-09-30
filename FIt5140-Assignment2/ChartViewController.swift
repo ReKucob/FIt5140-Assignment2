@@ -41,7 +41,7 @@ class ChartViewController: UIViewController,DatabaseListener {
         var lineChartEntry = [ChartDataEntry]()
         
         for data in baroDataList{
-            let value = ChartDataEntry(x: data.attitude!, y: data.temperature!)
+            let value = ChartDataEntry(x: data.pressure!, y: data.temperature!)
             lineChartEntry.append(value)
         }
         
