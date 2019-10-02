@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		372091509ECC5B008622ABBC /* Pods_FIt5140_Assignment2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E37B8FB1F34606B33AB3046F /* Pods_FIt5140_Assignment2.framework */; };
+		603AC3642344A772008297B6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 603AC3632344A772008297B6 /* GoogleService-Info.plist */; };
 		6062CB702329D41E008E6DAE /* Barometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB6F2329D41E008E6DAE /* Barometric.swift */; };
 		6062CB732329D764008E6DAE /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB722329D764008E6DAE /* FirebaseController.swift */; };
 		6062CB752329D845008E6DAE /* DatabaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6062CB742329D845008E6DAE /* DatabaseProtocol.swift */; };
 		60C1CE942341D1C5007F7E1D /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C1CE932341D1C5007F7E1D /* ChartViewController.swift */; };
-		60D78E692341C2210067232E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60D78E682341C2210067232E /* GoogleService-Info.plist */; };
 		60E71492233D94E000EE6025 /* RGBcolor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E71491233D94E000EE6025 /* RGBcolor.swift */; };
 		60EBE497232899F200917126 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE496232899F200917126 /* AppDelegate.swift */; };
 		60EBE499232899F200917126 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EBE498232899F200917126 /* ViewController.swift */; };
@@ -49,11 +49,11 @@
 		065621EE103F5A6B4DDABEF6 /* Pods_FIt5140_Assignment2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIt5140_Assignment2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14662487E8EC1664BD5D9C3C /* Pods_FIt5140_Assignment2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FIt5140_Assignment2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A592D89888530AE4377E30E /* Pods-FIt5140-Assignment2UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FIt5140-Assignment2UITests.release.xcconfig"; path = "Target Support Files/Pods-FIt5140-Assignment2UITests/Pods-FIt5140-Assignment2UITests.release.xcconfig"; sourceTree = "<group>"; };
+		603AC3632344A772008297B6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6062CB6F2329D41E008E6DAE /* Barometric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barometric.swift; sourceTree = "<group>"; };
 		6062CB722329D764008E6DAE /* FirebaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		6062CB742329D845008E6DAE /* DatabaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProtocol.swift; sourceTree = "<group>"; };
 		60C1CE932341D1C5007F7E1D /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		60D78E682341C2210067232E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		60E71491233D94E000EE6025 /* RGBcolor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBcolor.swift; sourceTree = "<group>"; };
 		60EBE493232899F200917126 /* FIt5140-Assignment2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FIt5140-Assignment2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		60EBE496232899F200917126 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,8 +156,8 @@
 				60EBE49A232899F200917126 /* Main.storyboard */,
 				60EBE49D232899F300917126 /* Assets.xcassets */,
 				60EBE49F232899F300917126 /* LaunchScreen.storyboard */,
+				603AC3632344A772008297B6 /* GoogleService-Info.plist */,
 				60EBE4A2232899F300917126 /* Info.plist */,
-				60D78E682341C2210067232E /* GoogleService-Info.plist */,
 				6062CB6F2329D41E008E6DAE /* Barometric.swift */,
 				6062CB722329D764008E6DAE /* FirebaseController.swift */,
 				6062CB742329D845008E6DAE /* DatabaseProtocol.swift */,
@@ -295,7 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60EBE4A1232899F300917126 /* LaunchScreen.storyboard in Resources */,
-				60D78E692341C2210067232E /* GoogleService-Info.plist in Resources */,
+				603AC3642344A772008297B6 /* GoogleService-Info.plist in Resources */,
 				60EBE49E232899F300917126 /* Assets.xcassets in Resources */,
 				60EBE49C232899F200917126 /* Main.storyboard in Resources */,
 			);

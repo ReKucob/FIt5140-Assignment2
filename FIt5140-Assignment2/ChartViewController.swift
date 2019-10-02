@@ -12,7 +12,8 @@ import Charts
 class ChartViewController: UIViewController,DatabaseListener {
     
     @IBOutlet weak var lineviewChart: LineChartView!
-       
+    @IBOutlet weak var ChartViewLine: LineChartView!
+   
     var baroDataList: [Barometric] = []
     weak var firebaseController: DatabaseProtocol?
     
@@ -53,6 +54,24 @@ class ChartViewController: UIViewController,DatabaseListener {
         
         lineviewChart.data = stat
         lineviewChart.chartDescription?.text = "Charts test"
+        
+        var chartlineEntry = [ChartDataEntry]()
+        
+        for data in baroDataList{
+            let value2 = ChartDataEntry(x: data.pressure!, y: data.attitude!)
+            
+            chartlineEntry.append(value2)
+        }
+        
+        let line2 = LineChartDataSet(entries: chartlineEntry, label: "attitude")
+        line2.colors = [NSUIColor.yellow]
+        
+        let stat2 = LineChartData()
+        stat2.addDataSet(line2)
+        
+        ChartViewLine.data = stat2
+        ChartViewLine.chartDescription?.text = "Pressure and Attitude"
+        
      }
      
      func onRGBChange(change: DatabaseChange, RGBData: [RGBcolor]) {
