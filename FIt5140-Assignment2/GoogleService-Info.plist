@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>564544574174-0n11875hc6h3v77idrsepoo76v0kj2qj.apps.googleusercontent.com</string>
+	<string>1017582305361-32civn2gq11tk877cndppb17vhd7pjn3.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.564544574174-0n11875hc6h3v77idrsepoo76v0kj2qj</string>
+	<string>com.googleusercontent.apps.1017582305361-32civn2gq11tk877cndppb17vhd7pjn3</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCcx8hFF_kTUCMzNTennCpoh251hRCLqrk</string>
+	<string>AIzaSyBn5AGzrS2SI2WcF8Fy6KOy0Xk-IXbmzNA</string>
 	<key>GCM_SENDER_ID</key>
-	<string>564544574174</string>
+	<string>1017582305361</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>group6.FIt5140-Assignment2</string>
 	<key>PROJECT_ID</key>
-	<string>group-work-assignment2</string>
+	<string>iweatherv2</string>
 	<key>STORAGE_BUCKET</key>
-	<string>group-work-assignment2.appspot.com</string>
+	<string>iweatherv2.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:564544574174:ios:0497f0ed1399eea427a84f</string>
+	<string>1:1017582305361:ios:51a65fab53b9ead2c37870</string>
 	<key>DATABASE_URL</key>
-	<string>https://group-work-assignment2.firebaseio.com</string>
+	<string>https://iweatherv2.firebaseio.com</string>
 </dict>
 </plist>

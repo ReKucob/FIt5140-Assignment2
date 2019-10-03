@@ -42,7 +42,8 @@ class ChartViewController: UIViewController,DatabaseListener {
         var lineChartEntry = [ChartDataEntry]()
         
         for data in baroDataList{
-            let value = ChartDataEntry(x: data.pressure!, y: data.temperature!)
+            let xvalue1 = lineChartEntry.count + 1
+            let value = ChartDataEntry(x: Double(xvalue1), y: data.temperature!)
             lineChartEntry.append(value)
         }
         
@@ -58,19 +59,20 @@ class ChartViewController: UIViewController,DatabaseListener {
         var chartlineEntry = [ChartDataEntry]()
         
         for data in baroDataList{
-            let value2 = ChartDataEntry(x: data.pressure!, y: data.attitude!)
+            let xvalue2 = chartlineEntry.count + 1
+            let value2 = ChartDataEntry(x: Double(xvalue2), y: data.pressure!)
             
             chartlineEntry.append(value2)
         }
         
-        let line2 = LineChartDataSet(entries: chartlineEntry, label: "attitude")
-        line2.colors = [NSUIColor.yellow]
+        let line2 = LineChartDataSet(entries: chartlineEntry, label: "Pressure")
+        line2.colors = [NSUIColor.purple]
         
         let stat2 = LineChartData()
         stat2.addDataSet(line2)
         
         ChartViewLine.data = stat2
-        ChartViewLine.chartDescription?.text = "Pressure and Attitude"
+        ChartViewLine.chartDescription?.text = "Pressure"
         
      }
      

@@ -22,6 +22,8 @@ class ViewController: UIViewController, DatabaseListener{
     @IBOutlet weak var attitudeField: UILabel!
     @IBOutlet weak var ImageField1st: UIImageView!
     @IBOutlet weak var SecondImageFIeld: UIImageView!
+    @IBOutlet weak var minField: UILabel!
+    @IBOutlet weak var maxField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +55,11 @@ class ViewController: UIViewController, DatabaseListener{
         baroDataList = BarometricData
         
         if (!baroDataList.isEmpty){
-        temperatureField.text! = String(format:"%.2f",baroDataList.last!.temperature!);
+        temperatureField.text! = String(format:"%.2f",baroDataList.last!.temperature!) + "°C";
         pressureField.text! = String(format: "%.2f",baroDataList.last!.pressure!);
         attitudeField.text! = String(format:"%.2f",baroDataList.last!.attitude!);
+        maxField.text! = String(format: "%.2f", baroDataList.last!.maxT!);
+        minField.text! = String(format: "%.2f", baroDataList.last!.minT!);
         }
     }
     
@@ -63,16 +67,17 @@ class ViewController: UIViewController, DatabaseListener{
         RGBDataList = RGBData
         
         let number = Int.random(in: 0 ..< 10)
-        
+
+
         if (number == 0){
-            ImageField1st.backgroundColor = UIColor(red: CGFloat(RGBDataList.last!.red!/255.0), green: CGFloat(RGBDataList.last!.green!/255.0), blue: CGFloat(RGBDataList.last!.blue!/255.0),alpha: 1.0)
-            SecondImageFIeld.backgroundColor = UIColor(red: CGFloat(RGBDataList.first!.red!/255.0), green: CGFloat(RGBDataList.first!.green!/255.0), blue: CGFloat(RGBDataList.first!.blue!/255.0),alpha: 1.0)
+            ImageField1st.setImageColor(color: UIColor(red: CGFloat(RGBDataList.last!.red!/255.0), green: CGFloat(RGBDataList.last!.green!/255.0), blue: CGFloat(RGBDataList.last!.blue!/255.0),alpha: 1.0))
+            SecondImageFIeld.setImageColor(color: UIColor(red: 255, green: 255, blue: 0,alpha: 1.0))
         }
-        
+
         if (number == 1)
         {
-            SecondImageFIeld.backgroundColor = UIColor(red: CGFloat(RGBDataList.last!.red!/255.0), green: CGFloat(RGBDataList.last!.green!/255.0), blue: CGFloat(RGBDataList.last!.blue!/255.0),alpha: 1.0)
-            ImageField1st.backgroundColor = UIColor(red: CGFloat(RGBDataList.first!.red!/255.0), green: CGFloat(RGBDataList.first!.green!/255.0), blue: CGFloat(RGBDataList.first!.blue!/255.0),alpha: 1.0)
+            SecondImageFIeld.setImageColor(color: UIColor(red: CGFloat(RGBDataList.last!.red!/255.0), green: CGFloat(RGBDataList.last!.green!/255.0), blue: CGFloat(RGBDataList.last!.blue!/255.0),alpha: 1.0))
+            ImageField1st.setImageColor(color: UIColor(red: 0, green: 255, blue: 255,alpha: 1.0))
         }
         
        
@@ -80,4 +85,13 @@ class ViewController: UIViewController, DatabaseListener{
 
 }
 
+extension UIImageView {
+    func setImageColor(color: UIColor)
+    
+    {
+        let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
+    }
+}
 

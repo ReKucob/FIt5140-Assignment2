@@ -40,7 +40,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
     }
     
     func setUpListeners(){
-        barometricRef = database.collection("Barometric sensor data")
+        barometricRef = database.collection("network1-barometer")
         barometricRef?.addSnapshotListener{(querySnapshot,error) in
            guard (querySnapshot?.documents) != nil
             else
@@ -50,7 +50,7 @@ class FirebaseController: NSObject, DatabaseProtocol {
             }
             self.parseBarometricSnapshot(snapshot: querySnapshot!)
     }
-        rgbRef = database.collection("RGB sensor data")
+        rgbRef = database.collection("network1-rgb")
         rgbRef?.addSnapshotListener{(querySnapshot,error) in
             guard querySnapshot?.documents != nil
             else
@@ -67,27 +67,31 @@ class FirebaseController: NSObject, DatabaseProtocol {
         snapshot.documentChanges.forEach{ change in
         
         let documentRef = change.document.documentID
-        let attitude = change.document.data()["attitude"] as! Double
+        let attitude = change.document.data()["altitude"] as! Double
         let pressure = change.document.data()["pressure"] as! Double
         let temperature = change.document.data()["temperature"] as! Double
+        let maxTem = change.document.data()["max_temp"] as! Double
+            let minTem = change.document.data()["min_temp"] as! Double
         print(documentRef)
         
             
             if change.type == .added{
                 print("New sensor data: \(change.document.data())")
-                let newSensorData = Barometric(newPressure: pressure,newAttitude: attitude, newTempature: temperature)
-                
+                let newSensorData = Barometric(newPressure: pressure,newAttitude: attitude, newTempature: temperature, newMax: maxTem, newMin: minTem)
+
                 BarometricSensorDataList.append(newSensorData)
-                
+
             }
             
             if change.type == .modified{
                 print("New sensor data: \(change.document.data())")
-                let newSensorData = Barometric(newPressure: pressure,newAttitude: attitude, newTempature: temperature)
-            
+                let newSensorData = Barometric(newPressure: pressure,newAttitude: attitude, newTempature: temperature, newMax: maxTem, newMin: minTem)
+                
                 BarometricSensorDataList.last!.attitude = newSensorData.attitude
                 BarometricSensorDataList.last!.pressure = newSensorData.pressure
                 BarometricSensorDataList.last!.temperature = newSensorData.temperature
+                BarometricSensorDataList.last!.maxT = newSensorData.maxT
+                BarometricSensorDataList.last!.minT = newSensorData.minT
                 
                 
             }
@@ -101,38 +105,38 @@ class FirebaseController: NSObject, DatabaseProtocol {
     
     func parseRGBSnapshot(snapshot: QuerySnapshot) {
         snapshot.documentChanges.forEach{ change in
-        
+
         let documentRGB = change.document.documentID
-            let red = change.document.data()["Red"] as! Float
-            let green = change.document.data()["Green"] as! Float
-            let blue = change.document.data()["Blue"] as! Float
+            let red = change.document.data()["red"] as! Float
+            let green = change.document.data()["green"] as! Float
+            let blue = change.document.data()["blue"] as! Float
         print(documentRGB)
-            
+
             if change.type == .added{
                 print("New RGB Data: \(change.document.data())")
                 let newRGBData = RGBcolor(newRed: red, newGreen: green, newBlue: blue)
-            
+
                 RGBSensorDataList.append(newRGBData)
             }
-            
+
             if change.type == .modified{
                 print("New RGB Data: \(change.document.data())")
                     let newRGBData = RGBcolor(newRed: red, newGreen: green, newBlue: blue)
-                
+
                 RGBSensorDataList.last!.red = newRGBData.red
                 RGBSensorDataList.last!.green = newRGBData.green
                 RGBSensorDataList.last!.blue = newRGBData.blue
-            
+
             }
-            
+
         }
-        
+
         listeners.invoke{(listener) in
             if listener.listenerType == ListenerType.all || listener.listenerType == ListenerType.RGBData{
                 listener.onRGBChange(change: .update, RGBData: RGBSensorDataList)
             }
         }
-        
+
     }
     
     
